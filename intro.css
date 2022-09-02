@@ -21,12 +21,16 @@ nav {
 }
 
 nav h1 {
- color: white;   
+  color: white;   
 }
 
 .nav-links ul {
   display: flex;
   list-style-type: none;   
+}
+
+nav .fa-solid {
+  display: none;
 }
 
 .nav-links li a {
@@ -141,4 +145,32 @@ footer h3 {
   width: 100px;
   border-radius: 9px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  nav .nav-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    width: 200px;
+    height: 100vh;
+    transition: 0.5s; 
+  }
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+  }
+  nav .nav-links ul li {
+    margin-top: 15px; 
+  }
+  nav .fa-solid {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15px;
+  }  
 }

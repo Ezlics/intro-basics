@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="intro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/43e71c938e.js" crossorigin="anonymous"></script>
     <title>intro</title>
 </head>
@@ -13,13 +13,15 @@
   <main>
     <nav>
       <h1>Markdev</h1>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="navClose()"></i> 
         <ul>
           <li><a href="/index.html">Home</a></li>  
           <li><a href="#">About</a></li>  
           <li><a href="/contact.html">Contact</a></li>  
         </ul> 
       </div>
+      <i class="fa-solid fa-bars" onclick="navOpen()"></i>
     </nav>
     <div class="main-page">
       <div class="mainpage-container">
@@ -57,7 +59,21 @@
       </div>
       <div class="footerline"></div>
       <small>© 2022. MarkDev IT company all rights reserve</small>
-    </footer> 
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script>
+      
+      const navLinks = document.getElementById("navLinks")
+
+      function navClose(){
+        navLinks.style.right = "-200px";
+      }
+
+      function navOpen(){
+        navLinks.style.right = "0";
+      }
+
+    </script> 
   </main>  
 </body>
 </html>
